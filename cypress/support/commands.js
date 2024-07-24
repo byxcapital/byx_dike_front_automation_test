@@ -1,5 +1,14 @@
 // Comandos personalizados do Cypress
 
+// ----------------------------------------------- Configuration ----------------------------------------------- //
+// Comando personalizado para visitar um site com headers
+Cypress.Commands.add('setCustomHeaders', () => {
+    cy.intercept('*', (req) => {
+      req.headers['cypress-byx-capital'] = '12uZ8Q53aE8NgpywzKe8NVr';
+      req.continue();
+    });
+  }); 
+  
 // ----------------------------------------------- Login ----------------------------------------------- //
 // Comandos para a funcionalidade de acesso ao sistema (login)
 Cypress.Commands.add('login', (username, password) => {

@@ -8,7 +8,7 @@ describe('Login Screen Tests', () => {
         cy.visit('/')
     });
 
-    it.only('should successfully log in with valid credentials', () => {
+    it('should successfully log in with valid credentials', () => {
         cy.login(loginData.valid.username, loginData.valid.password);
         cy.get('.sc-dAlxHm > .ant-typography').should('be.visible').and('contain', 'Conciliation as a Service');
         cy.checkLoginSuccessMessage();

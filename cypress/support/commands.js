@@ -18,11 +18,11 @@ Cypress.Commands.add('login', (username, password) => {
 });
 
 Cypress.Commands.add('checkLoginSuccessMessage', () => {
-    cy.get('.ant-notification-notice-message').should('contain', 'Login efetuado com sucesso');
+    cy.get('.ant-notification-notice-message').should('be.visible').and('contain', 'Login efetuado com sucesso');
 });
 
 Cypress.Commands.add('checkInvalidLoginMessage', () => {
-    cy.get('.ant-notification-notice-message').should('contain', 'Usuário ou senha inválidos');
+    cy.get('.ant-notification-notice-message').should('be.visible').and('contain', 'Usuário ou senha inválidos');
 });
 
 Cypress.Commands.add('checkLoginButtonDisabled', () => {

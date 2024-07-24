@@ -1,0 +1,8 @@
+.DS_Store
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+cypress/fixtures/
+node_modules/
+

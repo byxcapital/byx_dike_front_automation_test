@@ -4,6 +4,7 @@ const loginData = Cypress.env('login');
 
 describe('Login Screen Tests', () => {
     beforeEach(() => {
+       cy.setCustomHeaders();
         cy.visit('/')
     });
 

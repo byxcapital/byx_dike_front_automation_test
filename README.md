@@ -18,15 +18,25 @@ Este projeto utiliza Cypress com as seguintes configurações:
 ## Estrutura do Projeto
 
 ├── cypress
+
 │ ├── e2e/
+
 │ │ └── gui/ # Arquivos de testes de interface gráfica
+
 │ ├── support/
+
 │ │ └── commands.js # Comandos personalizados do Cypress
+
 ├── .github/
+
 │ └── workflows/
+
 │ └── cypress.yml # Configuração das GitHub Actions para testes automatizados
+
 ├── cypress.json # Arquivo de configuração principal do Cypress
+
 ├── .gitignore # Arquivo de configuração do Git para ignorar arquivos não necessários
+
 └── package.json # Arquivo de configuração do Node.js com as dependências e scripts
 
 

@@ -18,15 +18,25 @@ Este projeto utiliza Cypress com as seguintes configurações:
 ## Estrutura do Projeto
 
 ├── cypress
+
 │ ├── e2e/
+
 │ │ └── gui/ # Arquivos de testes de interface gráfica
+
 │ ├── support/
+
 │ │ └── commands.js # Comandos personalizados do Cypress
+
 ├── .github/
+
 │ └── workflows/
+
 │ └── cypress.yml # Configuração das GitHub Actions para testes automatizados
+
 ├── cypress.json # Arquivo de configuração principal do Cypress
+
 ├── .gitignore # Arquivo de configuração do Git para ignorar arquivos não necessários
+
 └── package.json # Arquivo de configuração do Node.js com as dependências e scripts
 
 
@@ -37,18 +47,21 @@ Este projeto utiliza Cypress com as seguintes configurações:
 git clone https://github.com/carlosmoreirabyx/byx_dike_front_automation_test    
 ```
 2. Navegue até o diretório do projeto:
-- cd byx_dike_front_automation_test
-
+```bash
+cd byx_dike_front_automation_test
+```
 3. Instale as dependências do projeto:
-- npm install
-
+```bash
+npm install
+```
 
 ## Executando os Testes
 
 Para executar os testes Cypress localmente, você pode usar o comando:
 
-- npx cypress run
-
+```bash
+npx cypress run
+```
 
 Isso executará os testes em modo headless no navegador padrão definido nas configurações do Cypress.
 

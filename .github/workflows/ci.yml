@@ -1,0 +1,27 @@
+name: Tests Examples - CI
+on:
+  push:
+  schedule: ## Schedule the job to run at 12.am daily.
+    - cron: '0 12 * * 1-5'
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+          
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        with:
+          record: true
+          group: 'Tests Examples'
+          spec: |
+            cypress/e2e/gui/login.spec.cy.js
